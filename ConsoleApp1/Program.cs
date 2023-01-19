@@ -19,12 +19,14 @@ namespace ConsoleApp1
             Console.WriteLine();
             double star;
             
-
-            int[] dice = {0,0,0,0,0,0,0,0,0,0,0};
+            // array can be initalized in a differnt way with new int[11]
+            int[] dice = new int[] {0,0,0,0,0,0,0,0,0,0,0};
             for ( int i = 0; i < rolls; ++i)
             {
                 int value = 0;
+                // simulate dice 1 roll
                 value = rnd.Next(1, 7);
+                // simulate dice 2 roll
                 value += rnd.Next(1, 7);
                 dice[value-2] += 1;
             }
